@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('index', 'ConsultorController@index')->name('index');
+
+Route::get('desempenho', 'ConsultorController@desempenho')->name('desempenho');
+
+Route::post('desempenho-graph-linebar', 'ConsultorController@graficaLineBar')->name('graph_linebar');
+
+Route::post('desempenho-graph-pizza', 'ConsultorController@graficaPizza')->name('graph_pizza');
